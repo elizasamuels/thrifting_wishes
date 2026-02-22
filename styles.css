@@ -56,7 +56,12 @@ img {
   align-items: center;
   width: 100%;
   z-index: 900;
-  padding-bottom: 0.25rem;
+  padding: 0.35rem;
+
+  li {
+    padding-left: 0rem;
+    padding-right: 1rem;
+  }
 }
 
 /* -------------------
@@ -88,7 +93,7 @@ img {
   flex-direction: row;
   flex-wrap: nowrap;            
   gap: 1rem;
-  padding-right: 1rem;                    
+  padding-right: 1rem;
 }
 
 .custom-navbar .nav-link {
