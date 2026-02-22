@@ -13,7 +13,7 @@ body {
   background: var(--bg-soft);
   color: var(--text-main);
   height: 100vh;
-  padding-top: 70px; /* adjust for navbar height changes */
+  padding-top: 80px; /* adjust for navbar height changes */
 }
 
 section img {
@@ -58,7 +58,6 @@ img {
   z-index: 900;
   padding: 0.35rem;
 
-
   li {
     list-style: none;
     text-decoration: none;
@@ -89,6 +88,9 @@ img {
 .custom-navbar .nav-container {
   display: flex;
   align-items: center;
+  a {
+    padding-left: 0rem;
+  }
 }
 
 .custom-navbar .navbar-nav {
