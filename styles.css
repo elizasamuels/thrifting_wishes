@@ -1,0 +1,114 @@
+:root {
+  --nav-color: rgb(220, 139, 168);
+  --pink-main: #5e1f2f;
+  --pink-dark: #900430;
+  --bg-dark: #1f1f24;
+  --bg-soft: #f8c7cf;
+  --text-main: #2c2c2c;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg-soft);
+  color: var(--text-main);
+  height: 100vh;
+  padding-top: 60px; /* adjust for navbar height changes */
+}
+
+section {
+    padding: 2rem;
+}
+
+h3 {
+   color: var(--pink-main);
+   padding: 1rem;
+}
+
+img {
+  width: 100px;
+}
+
+/* -------------------
+   NAVBAR
+-------------------- */
+.custom-navbar {
+  background-color: var(--nav-color);
+  position: fixed;
+  top: 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  z-index: 900;
+}
+
+/* -------------------
+   NAV LINK INTERACTION
+-------------------- */
+.custom-navbar .navbar-brand {
+  color: var(--pink-dark);
+  text-decoration: none;
+  padding: 2rem;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+  display: inline-block;    /* prevents layout shift */
+}
+
+.custom-navbar .nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.custom-navbar .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;            
+  gap: 1rem;                    
+}
+
+.custom-navbar .nav-link {
+  color: var(--pink-main);
+  text-decoration: none;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  white-space: nowrap;      /* prevents text wrapping */
+}
+
+/* Hover interaction */
+.custom-navbar .nav-link:hover {
+  color: var(--pink-dark);
+  transform: scale(1.08);
+}
+
+/* Active page */
+.custom-navbar .nav-link.active {
+  color: var(--pink-dark);
+  transform: scale(1.05);
+  font-weight: 600;
+}
+
+/* Prevent Bootstrap overrides */
+.custom-navbar .nav-link:focus,
+.custom-navbar .nav-link:active {
+  color: var(--pink-dark);
+}
+
+@media (max-width: 576px) {
+  .custom-navbar .navbar-nav {
+    flex-direction: row; /* stack links vertically */
+    gap: 0.5rem;            /* optional smaller spacing */
+  }
+}
+
+.navbar-toggler {
+  border-color: var(--pink-dark);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
