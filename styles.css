@@ -60,8 +60,10 @@ img {
 
 
   li {
+    list-style: none;
+    text-decoration: none;
     padding-left: 0rem;
-    padding-right: 2rem;
+    padding-right: 1rem;
   }
 }
 
