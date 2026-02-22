@@ -58,9 +58,10 @@ img {
   z-index: 900;
   padding: 0.35rem;
 
+
   li {
     padding-left: 0rem;
-    padding-right: 1rem;
+    padding-right: 2rem;
   }
 }
 
